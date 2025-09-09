@@ -10,9 +10,20 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 4000;
 
+// CORS configuration
+const corsOrigins = process.env.NODE_ENV === 'production' 
+  ? [
+      'https://auth-app-pro-nicf-nine.vercel.app', // Your frontend Vercel URL
+      /^https:\/\/.*\.vercel\.app$/ // Allow all Vercel deployment URLs
+    ]
+  : [
+      'http://localhost:3000', 
+      'http://localhost:5173'
+    ];
+
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:5173'], // Add your frontend URLs
+  origin: corsOrigins,
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
