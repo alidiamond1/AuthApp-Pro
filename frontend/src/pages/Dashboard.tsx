@@ -9,9 +9,7 @@ import {
   Activity,
   Bell,
   ChevronRight,
-  TrendingUp,
   Award,
-  Zap,
   Star,
   Clock,
   Globe
