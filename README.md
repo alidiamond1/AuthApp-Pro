@@ -349,9 +349,7 @@ If you have any questions or need help:
 
 ---
 
-## 🚀 **Made with ❤️ and cutting-edge technology**
+## 🚀 **Made with ❤️ Alidiamond **
 
 **AuthApp Pro** - *The future of authentication systems*
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/your-username/authapp-pro)
-[![Deploy to Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/your-username/authapp-pro)

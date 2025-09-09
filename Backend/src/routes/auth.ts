@@ -27,7 +27,7 @@ router.post('/register', async (req: Request, res: Response) => {
       return res.status(400).json({
         error: 'Validation error',
         message: 'Invalid input data',
-        details: validationResult.error.errors.map(err => ({
+        details: validationResult.error.issues.map((err: any) => ({
           field: err.path.join('.'),
           message: err.message
         }))
@@ -90,7 +90,7 @@ router.post('/login', async (req: Request, res: Response) => {
       return res.status(400).json({
         error: 'Validation error',
         message: 'Invalid input data',
-        details: validationResult.error.errors.map(err => ({
+        details: validationResult.error.issues.map((err: any) => ({
           field: err.path.join('.'),
           message: err.message
         }))

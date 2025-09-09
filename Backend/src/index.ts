@@ -103,4 +103,9 @@ process.on('SIGTERM', () => {
 });
 
 // Start the server
-startServer();
+if (process.env.NODE_ENV !== 'production') {
+  startServer();
+}
+
+// Export for Vercel
+export default app;
